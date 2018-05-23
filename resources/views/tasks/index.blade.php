@@ -5,7 +5,6 @@
     <h1>タスク一覧</h1>
     {!! link_to_route('tasks.create', 'タスク追加') !!}
     
-    @php(dump($tasks))
     @if(count($tasks) > 0 )
         <ul>
             @foreach($tasks as $task)
