@@ -4,14 +4,15 @@
 
     <h1>id: {!! $task->id !!}詳細ページ</h1>
     <ul>
-        <li>{{ $task->id }}</li>
-        <li>{{ $task->content }}</li>
+        <li>id: {{ $task->id }}</li>
+        <li>タスク: {{ $task->content }}</li>
         {!! link_to_route('tasks.edit', 'このタスクを編集する', ['id' => $task->id]) !!}
-    </ul>
     
-    {!! Form::model($task, ['route' => ['tasks.destroy', $task->id], 'method' => 'delete']) !!}
-        {!! Form::submit('削除') !!}
-    {!! Form::close() !!}
+        {!! Form::model($task, ['route' => ['tasks.destroy', $task->id], 'method' => 'delete']) !!}
+            {!! Form::submit('削除') !!}
+        {!! Form::close() !!}
+        
+    </ul>
     
 
 @endsection

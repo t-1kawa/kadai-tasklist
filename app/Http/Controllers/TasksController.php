@@ -45,7 +45,6 @@ class TasksController extends Controller
     public function store(Request $request)
     {
         $tasks = Task::insert(['id' => $request->id, 'content' => $request->content]);
-        
         return redirect('/');
     }
 

@@ -5,5 +5,7 @@
 </head>
 
 <body>
+    {!! link_to_route('tasks.index', 'TaskList') !!}
+    
     @yield('content')
 </body>
